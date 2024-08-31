@@ -1,0 +1,60 @@
+
+variavel = valor
+
+& + variavel = endereço
+
+* + ptr = valor de ponteiro 
+
+ptr = endereço de ponteiro
+
+____________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+1. Quantidade de paragrafos que serao fornecidos;
+2. Texto (paragrafos);
+3. Lista de palavras positivas separadas por espacos, todas em uma so linha;
+4. Lista de palavras negativas separadas por espacos, todas em uma so linha;
+5. Quantidade de questoes a serem respondidas;
+6. Questoes, uma por linha.
+
+____________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Existem 4 questoes possiveis, cada uma identificada por um numero de 1 a 4. Sao elas:
+1 - Determine a polaridade do texto;
+2 i - Determine a polaridade do paragrafo i (sendo i um valor de 0 a 9 correspondente ao respectivo paragrafo);
+2 - Determine a polaridade da sentenca mais longa considerando a quantidade de caracteres nas palavras da sentenca;
+3 - Determine a polaridade da sentenca mais curta considerando a quantidade de palavras na sentenca.
+
+____________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+palavra = sequencia de letras separadas por " " ou por " . "
+
+senteca = sequencia de palavras que precedem um " . " 
+
+paragrafo = sequencia de sentenca que precedem um " /n "
+
+texto = sequencia de paragrafos
+____________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+O formato da resposta para cada questao segue o padrao:
+
+X Palavras positivas, Y Palavras negativas: Polaridade Z
+
+Sendo X e Y as respectivas quantidades de palavras positivas e negativas presentes no escopo determinado pela questão, enquanto Z corresponde 
+a "positiva" se X-Y > 3, "positiva" se X > 0 && Y == 0, "negativa" se Y-X > 3, "negativa" se X == 0 && Y > 0 e "neutra" se X > 0 && Y > 0 && 
+abs(X-Y) <= 3.
+
+____________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+strings em C => vetores de char terminados em NULL => " \0 "
+
+NULL => tem código ASCII igual a 0 em decimal
+
+para acessar os caracteres de uma string e necessario usar o endereco do vetores
+
+utlimo caracetere de uma string sempre sera NULL => " \0 "
+
+fgets => le todos os caracteres e reserva espaco para " \ 0 ", só acaba quando encontra um " /n "
+
+fgets(variavel_string, num_caracteres, fonte)
+
+0 1 2 3 4 5 | 6 7 8 9

@@ -1,0 +1,6 @@
+
+2 i - Determine a polaridade do paragrafo i (sendo i um valor de 0 a 9 correspondente ao respectivo paragrafo);
+
+2 - Determine a polaridade da sentenca mais longa considerando a quantidade de caracteres nas palavras da sentenca;
+
+3 - Determine a polaridade da sentenca mais curta considerando a quantidade de palavras na sentenca.
