@@ -1,0 +1,1 @@
+Escreva um programa que, usando um laço for, imprima na tela os caracteres de código ASCII 32 a 255 decimal. O programa deve imprimir cada caractere, seu código ASCII em formato decimal e seu código ASCII em formato hexadecimal.
