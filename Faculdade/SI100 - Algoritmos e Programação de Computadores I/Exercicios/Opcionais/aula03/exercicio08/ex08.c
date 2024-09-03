@@ -7,23 +7,35 @@ int main(){
     float umNumero, doisNumero;
     char operador;
     float resposta;
+    int valido = 1;
 
     scanf("%f %c %f", &umNumero, &operador, &doisNumero);
     //printf("%f%c%f", umNumero, operador, doisNumero);
 
-    if(operador == '+'){
-        resposta = umNumero + doisNumero;       
-    }else if( operador == '-'){
+    switch (operador) {
+    case '+':
+        resposta = umNumero + doisNumero;
+        break;
+    case '-':
         resposta = umNumero - doisNumero;
-    }else if( operador == '/'){
-        resposta = umNumero / doisNumero;
-    }else if( operador == '*'){
+        break;
+    case '/':
+        if (doisNumero == 0) {
+                printf("Erro: Divisão por zero.\n");
+                valido = 0; // Indica que a operação não é válida
+            } else {
+                resposta = umNumero / doisNumero;
+            }
+        break;
+    case '*':
         resposta = umNumero * doisNumero;
-    }else{
+        break;
+    default:
         printf("ERROR");
     }
-
-    printf("%f %c %f = %f", umNumero, operador, doisNumero , resposta);
-
+    
+    if(valido = 1){
+        printf("%.2f %c %.2f = %.2f", umNumero, operador, doisNumero , resposta);
+    }
     return 0;
 }
