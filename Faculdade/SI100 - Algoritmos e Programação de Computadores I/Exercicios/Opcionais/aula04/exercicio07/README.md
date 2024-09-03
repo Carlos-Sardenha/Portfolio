@@ -8,11 +8,11 @@ Utilizando as estruturas de loop vistas em aula, implemente um programa que escr
 ⚫⚫⚪⚪⚫⚫⚫⚫⚪⚪⚫⚫<br>
 ⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫<br>
 
-t = ⚫
-b = ⚪
+t = ⚫<br>
+b = ⚪<br>
 
-1- 6p
-2- 4p / 2b
-3- 6b
-5- 4p /2b
-6- 6p
+1- 6p<br>
+2- 4p / 2b<br>
+3- 6b<br>
+5- 4p /2b<br>
+6- 6p<br>
