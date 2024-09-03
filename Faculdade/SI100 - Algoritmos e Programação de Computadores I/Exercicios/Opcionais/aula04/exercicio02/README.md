@@ -1,0 +1,1 @@
+Faça um programa, utilizando o laço while, que solicite caracteres ao usuário e imprima na tela seus respectivos códigos ASCII. O programa deve terminar quando o usuário digitar a o caractere ‘#’ (dica: consulte a tabela ASCII -http://www.asciitable.com/);
