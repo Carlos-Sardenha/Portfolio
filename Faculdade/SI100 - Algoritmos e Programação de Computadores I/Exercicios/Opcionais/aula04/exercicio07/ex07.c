@@ -23,7 +23,11 @@ void imprime_linha(int p, int b) {// ex 4p | 2b
 
 int main(){
 
-    for(int i = 0; i < 6; i++){//imprimir linha 1
-        printf("")
-    }
+    int preto;
+    int branco;
+
+    printf("Quantidade de Bolinhas pretas: ");
+    scanf("");
+    
+    imprime_linha()
 }
