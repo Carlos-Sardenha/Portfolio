@@ -1,13 +1,15 @@
 Utilizando as estruturas de loop vistas em aula, implemente um programa que escreva na tela o padrão de caracteres dado na figura a seguir:
 
 1234567890
-▼▼▼▼▼▼▼▼▼▼   ▼▼▼▼▼▼▼▼▼▼\n
-▼▼▼◯◯▼▼▼   ▼▼▼◯◯▼▼▼\n
-▼◯◯◯◯▼   ▼◯◯◯◯▼\n
-◯◯◯◯◯   ◯◯◯◯◯\n
-▼◯◯◯◯▼   ▼◯◯◯◯▼\n
-▼▼▼◯◯▼▼▼   ▼▼▼◯◯▼▼▼\n
-▼▼▼▼▼▼▼▼▼▼   ▼▼▼▼▼▼▼▼▼▼\n
+1234567890<br>
+▼▼▼▼▼▼▼▼▼▼   ▼▼▼▼▼▼▼▼▼▼<br>
+▼▼▼◯◯▼▼▼   ▼▼▼◯◯▼▼▼<br>
+▼◯◯◯◯▼   ▼◯◯◯◯▼<br>
+◯◯◯◯◯   ◯◯◯◯◯<br>
+▼◯◯◯◯▼   ▼◯◯◯◯▼<br>
+▼▼▼◯◯▼▼▼   ▼▼▼◯◯▼▼▼<br>
+▼▼▼▼▼▼▼▼▼▼   ▼▼▼▼▼▼▼▼▼▼<br>
+
 
 t = ▼
 b = ◯
