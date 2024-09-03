@@ -1,12 +1,12 @@
 Utilizando as estruturas de loop vistas em aula, implemente um programa que escreva na tela o padrão de caracteres dado na figura a seguir:
 
-⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫<br>
-⚫⚫⚪⚪⚫⚫⚫⚫⚪⚪⚫⚫<br>
-⚫⚪⚪⚪⚪⚫⚫⚪⚪⚪⚪⚫<br>
-⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪<br>
-⚫⚪⚪⚪⚪⚫⚫⚪⚪⚪⚪⚫<br>
-⚫⚫⚪⚪⚫⚫⚫⚫⚪⚪⚫⚫<br>
-⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫<br>
+⚫⚫⚫⚫⚫⚫⚫⚫     ⚫⚫⚫⚫⚫⚫<br>
+⚫⚫⚫⚪⚪⚫⚫⚫    ⚫⚫⚪⚪⚫⚫<br>
+⚫⚫⚪⚪⚪⚪⚫⚫     ⚫⚪⚪⚪⚪⚫<br>
+⚫⚪⚪⚪⚪⚪⚪⚫     ⚪⚪⚪⚪⚪⚪<br>
+⚫⚫⚪⚪⚪⚪⚫⚫     ⚫⚪⚪⚪⚪⚫<br>
+⚫⚫⚫⚪⚪⚫⚫⚫     ⚫⚫⚪⚪⚫⚫<br>
+⚫⚫⚫⚫⚫⚫⚫⚫     ⚫⚫⚫⚫⚫⚫<br>
 
 t = ⚫<br>
 b = ⚪<br>
