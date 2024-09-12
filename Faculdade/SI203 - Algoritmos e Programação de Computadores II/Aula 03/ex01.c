@@ -19,19 +19,24 @@ int main() {
     for (int i = 0; i < TAM; i++) {
         printf("Digite o nome da banda %d: ", i + 1);
         scanf("%s", bab[i].nome);  // Ler a string para o nome da banda
-
+        getchar();
+            
         printf("Digite o gênero da banda %d: ", i + 1);
         scanf("%s", bab[i].genero);  // Ler o gênero musical
-
+        getchar();
+            
         printf("Digite o número de integrantes da banda %d: ", i + 1);
         scanf("%d", &bab[i].integrantes);
-
+        getchar();
+            
         printf("Digite o número de seguidores no Instagram da banda %d: ", i + 1);
         scanf("%d", &bab[i].instagram);
-
+        getchar();
+            
         printf("Digite o número de ouvintes mensais da banda %d: ", i + 1);
         scanf("%d", &bab[i].ouvintes);
-
+        getchar();
+            
         printf("\n");  // Pula linha entre as entradas
     }
 
@@ -43,6 +48,8 @@ int main() {
         printf("Seguidores no Instagram: %d\n", bab[i].instagram);
         printf("Ouvintes mensais: %d\n\n", bab[i].ouvintes);
     }*/
+
+    for(
 
     return 0;
 }
