@@ -1,70 +1,161 @@
 #include <stdio.h>
-
-/* 
-    instruções pra fazer o jogo
-
-   Definindo os naipes do baralho:
-   O - Ouros
-   P - Paus
-   C - Copas
-   E - Espadas
-   
-   Definindo os especiais do baralho:
-   1 - As
-   11 - valete
-   12 - Damas 
-   13 - Reis
-
-   Copas ( C ) = 1 ponto
-   Dama espadas ( E-12 ) = 13 pontos
-   13 Copas ( C ) + Dama espadas ( E-12 ) = 0 pontos, demais recebem 26 pontos 
+/*
+O - Ouros
+P - Paus
+C - Copas
+E - Espadas
+        
+1 - As
+11 - valete
+12 - Damas 
+13 - Reis
 */
 
-int main() {
+        int A, B, C, D; //numero de cartas
+        int contA = 0, contB = 0, contC = 0, contD = 0; //contador de quantidade de cartas por linha
+        int pontA = 0, pontB = 0, pontC = 0, pontD = 0; //pontuacao dos jogadores
+        char vencedor; //letra vencedora
+        char perdedor; //letra derrotada
+        int coringa;
+
+        int main () {
     
-    int quantidadeDeCartasJogadorUm = 0;
-    int quantidadeDeCartasJogadorDois = 0;
-    int quantidadeDeCartasJogadorTres = 0;
-    int quantidadeDeCartasJogadorQuatro = 0;
-
-    int pontuacaoJogadorUm = 0;
-    int pontuacaoJogadorDois = 0; 
-    int pontuacaoJogadorTres = 0;
-    int pontuacaoJogadorQuatro = 0;
-    
-    //operadores for
-    int especiais = 0;
-    char naipe = 0;
-
-    //for (i = 0; i < 0; i++){
-        scanf("%d %d %d %d", &quantidadeDeCartasJogadorUm, &quantidadeDeCartasJogadorDois, &quantidadeDeCartasJogadorTres, &quantidadeDeCartasJogadorQuatro);
-
-        // leitura jogador 1 e soma dos pontos
-
-        for (int i = 0; i < quantidadeDeCartasJogadorUm; i++) {
-            int especiais[];
-            int naipe[];
-            scanf("%d-%c", &especiais, &naipe);
+        while (pontA < 100 && pontB < 100 && pontC < 100 && pontD < 100) { //loop ate os 100 pontos
             
-            int quantidadeJogadorUmdeCopas = 0;
-            //operadores for
-            int especiais = 0;
-            char naipe = 0;
+            contA = 0;
+            contB = 0;
+            contC = 0;
+            contD = 0;//reset do numero de cartas (acho que nao e necessario mas nao custa nada)
 
-            if(especiais == 1 || especiais == 11 || especiais == 12 || especiais == 13 ) {
-                pontuacaoJogadorUm = pontuacaoJogadorUm + 1;
-                quantidadeJogadorUmdeCopas = quantidadeJogadorUmdeCopas + 1;
+            
+            scanf("%d %d %d %d", &A, &B, &C, &D); //coleta da quantidade de cartas
+            
+            coringa = 0;//resetar coringa
+            while(contA < A) {//loop de acordo com a quantidade de cartas na mao do jogador
+
+                char naipe;
+                int num;//operadores
+
+                scanf("%d-%c", &num, &naipe);
+
+                if(naipe == 'C'){
+                    pontA = pontA + 1;
+                    coringa = coringa + 1;
+                }
+                if(num == 12 && naipe == 'E') {
+                    pontA = pontA + 13;
+                    coringa = coringa + 1;
+                }
+                if(coringa == 14) { // ativo SE houver 13 cartas de copas ( 13 C ) e tambem tiver 1 carta de espadas ( 1 12-E ), total 14 cartas
+                    pontA = pontA - 26;
+                    pontB = pontB + 26;
+                    pontC = pontC + 26;
+                    pontD = pontD + 26;
+                    coringa = 0;
+                }
+                contA = contA + 1;
             }
-            if(naipe == 12) {
-                pontuacaoJogadorUm = pontuacaoJogadorUm + 13;
-            }
-            if(naipe == 12 && quantidadeJogadorUmdeCopas == 13) {
-                pontuacaoJogadorDois = pontuacaoJogadorDois + 26;
-                pontuacaoJogadorTres = pontuacaoJogadorTres + 26;
-                pontuacaoJogadorQuatro = pontuacaoJogadorQuatro + 26;
-            }
+
+            coringa = 0;// resetar coringa
+            while(contB < B) {//loop de acordo com a quantidade de cartas na mao do jogador
+                char naipe;
+                int num; 
+                scanf("%d-%c", &num, &naipe);
+
+                if(naipe == 'C'){
+                    pontB = pontB + 1;
+                    coringa = coringa + 1;
+                }
+                if(num == 12 && naipe == 'E') {
+                    pontB = pontB + 13;
+                    coringa = coringa + 1;;
+                }
+                if(coringa == 14) {
+                    pontB = pontB - 26;
+                    pontA = pontA + 26;
+                    pontC = pontC + 26;
+                    pontD = pontD + 26;
+                    coringa = 0;
+                    }
+                contB = contB + 1;
+                }
+                
+            coringa = 0;// resetar coringa
+
+            while(contC < C) {
+                char naipe;
+                int num; 
+                scanf("%d-%c", &num, &naipe);
+
+                if(naipe == 'C'){
+                    pontC = pontC + 1;
+                    coringa = coringa + 1;
+                }
+                if(num == 12 && naipe == 'E') {
+                    pontC = pontC + 13;
+                    coringa = coringa + 1;
+                }
+                if(coringa == 14) {
+                    pontC = pontC - 26;
+                    pontA = pontA + 26;
+                    pontB = pontB + 26;
+                    pontD = pontD + 26;
+                    coringa = 0;
+                }
+                contC = contC + 1;
+                }        
+
+            coringa = 0;// resetar coringa 
+
+            while(contD < D) {
+                char naipe;
+                int num; 
+                scanf("%d-%c", &num, &naipe);   
+
+                if(naipe == 'C'){
+                    pontD = pontD + 1;
+                    coringa = coringa + 1;
+                }
+                if(num == 12 && naipe == 'E') {
+                    pontD = pontD + 13;
+                    coringa = coringa + 1;
+                }
+                if(coringa == 14) {
+                    pontD = pontD - 26;
+                    pontA = pontA + 26;
+                    pontB = pontB + 26;
+                    pontC = pontC + 26;
+                    coringa = 0;
+                }
+                contD = contD + 1;
+                }   
+
+                printf("A: %d B: %d C: %d D: %d\n", pontA, pontB, pontC, pontD);
         }
-    //}
-printf("%d", pontuacaoJogadorUm);
-    return 0; 
-}
+
+        //vencedor
+        if(pontA < pontB && pontA < pontC && pontA < pontD){
+            vencedor = 'A';
+        }else if(pontB < pontA && pontB < pontC && pontB < pontD) {
+            vencedor = 'B';
+        }else if(pontC < pontA && pontC < pontB && pontC < pontD ) {
+            vencedor ='C';
+        }else if(pontD < pontA && pontD < pontB && pontD < pontC){
+            vencedor = 'D';
+        }
+
+        //perdedor
+        if(pontA > pontB && pontA > pontC && pontA > pontD){
+            perdedor = 'A';
+        }else if(pontB > pontA && pontB > pontC && pontB > pontD) {
+            perdedor = 'B';
+        }else if(pontC > pontA && pontC > pontB && pontC > pontD ) {
+            perdedor ='C';
+        }else if(pontD > pontA && pontD > pontB && pontD > pontC) {
+            perdedor = 'D';
+        }
+
+        printf("Vencedor: jogador %c; Ultimo Lugar: jogador %c\n", vencedor, perdedor);
+
+        return 0;
+        }
