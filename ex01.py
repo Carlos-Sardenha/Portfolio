@@ -2,8 +2,11 @@ import pyautogui
 import time
 import pandas as pd
 
-# Criação de uma lista de números sequenciais
-numeros = list(range(1, 101))  # Altere 101 para o número desejado de números
+# Carrega os dados do arquivo Excel
+df = pd.read_excel('ex01_excel.xlsx')
+
+# Assumindo que os números estão na primeira coluna do Excel
+numeros = df.iloc[:, 0].tolist()
 
 # Defina as coordenadas
 x = 362
