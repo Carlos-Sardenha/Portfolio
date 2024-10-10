@@ -15,7 +15,8 @@ y = 450
 # Abre o Excel (certifique-se de que a planilha está aberta e ativa)
 time.sleep(5)  # Tempo para você posicionar o Excel
 
-for numero in numeros:
+# Itera sobre os números na ordem inversa
+for numero in reversed(numeros):
     # Clica nas coordenadas
     pyautogui.click(x, y)
     time.sleep(0.5)  # Espera meio segundo para garantir que o clique foi registrado
